@@ -16,32 +16,26 @@ M.mock("/mock/getTopic", () => {
         {
           topic_nswer_id: 1,
           topic_id: i,
-          answer_name: `选项${i + 1}`,
+          answer_name: `选项1`,
           is_standard_answer: 0
         },
         {
           topic_nswer_id: 2,
           topic_id: i,
-          answer_name: `选项${i + 1}`,
+          answer_name: `选项2`,
           is_standard_answer: 0
         },
         {
           topic_nswer_id: 3,
           topic_id: i,
-          answer_name: `选项${i + 1}`,
+          answer_name: `选项3`,
           is_standard_answer: 0
         },
         {
           topic_nswer_id: 4,
           topic_id: i,
-          answer_name: `选项${i + 1}`,
+          answer_name: `选项4`,
           is_standard_answer: 0
-        },
-        {
-          topic_nswer_id: 5,
-          topic_id: i,
-          answer_name: `选项${i + 1}`,
-          is_standard_answer: 1
         }
       ]
     });
