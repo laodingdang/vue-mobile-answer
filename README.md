@@ -1,4 +1,4 @@
-# happyfri
+# vue-mobile-answer
 
 ## Project setup
 ```
