@@ -8,7 +8,6 @@ axios.defaults.timeout = 20000;
 axios.interceptors.request.use(
   res => {
     // 在发送请求之前做些什么
-    console.log("拦截器触发");
     return res;
   },
   e => {
@@ -20,7 +19,6 @@ axios.interceptors.request.use(
 // 添加响应拦截器
 axios.interceptors.response.use(
   res => {
-    console.log("响应器触发");
     return res;
   },
   e => {

@@ -83,7 +83,7 @@ export default {
       if (this.choosedNum !== null) {
         this.choosedNum = null;
         // 保存答案 题目索引+1 跳到下一题
-        this.addNum(this.choosedId);
+        this.addNum({ id: this.choosedId, len: this.itemLen });
       } else {
         alert("请选择一个选项后再点击下一题按钮！");
       }
@@ -119,6 +119,10 @@ export default {
   },
   created() {
     this.getTopic();
+    // 初始化信息
+    if (this.fatherComponent == "home") {
+      this.initializeData();
+    }
   }
 };
 </script>

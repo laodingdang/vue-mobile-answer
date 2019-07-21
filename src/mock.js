@@ -2,7 +2,7 @@ import M from "mockjs";
 
 M.mock("/mock/getTopic", () => {
   let list = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 5; i++) {
     list.push({
       topic_id: i,
       active_topic_id: 4,
@@ -14,25 +14,25 @@ M.mock("/mock/getTopic", () => {
       acrive_end_time: "1479139200",
       topic_answer: [
         {
-          topic_nswer_id: 1,
+          topic_answer_id: 1,
           topic_id: i,
           answer_name: `选项1`,
           is_standard_answer: 0
         },
         {
-          topic_nswer_id: 2,
+          topic_answer_id: 2,
           topic_id: i,
           answer_name: `选项2`,
           is_standard_answer: 0
         },
         {
-          topic_nswer_id: 3,
+          topic_answer_id: 3,
           topic_id: i,
           answer_name: `选项3`,
           is_standard_answer: 0
         },
         {
-          topic_nswer_id: 4,
+          topic_answer_id: 4,
           topic_id: i,
           answer_name: `选项4`,
           is_standard_answer: 0
