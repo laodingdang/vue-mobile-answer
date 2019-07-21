@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+import App from "./App.vue";
 
 Vue.use(Router);
 
@@ -8,22 +8,22 @@ export default new Router({
   routes: [
     {
       path: "/",
-      component: Home,
+      component: App,
       children: [
         {
           path: "/",
           component: () =>
-            import(/* webpackChunkName: "Topic" */ "./views/Topic.vue")
+            import(/* webpackChunkName: "home" */ "./views/home/index.vue")
         },
         {
           path: "/item",
           component: () =>
-            import(/* webpackChunkName: "Item" */ "./views/Item.vue")
+            import(/* webpackChunkName: "Item" */ "./views/item/index.vue")
         },
         {
           path: "/score",
           component: () =>
-            import(/* webpackChunkName: "Score" */ "./views/Score.vue")
+            import(/* webpackChunkName: "Score" */ "./views/score/index.vue")
         }
       ]
     }

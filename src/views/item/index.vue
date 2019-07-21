@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <itemcontainer></itemcontainer>
+    <itemcontainer father-component="item"></itemcontainer>
   </div>
 </template>
 
 <script>
-import itemcontainer from "../components/itemcontainer";
+import itemcontainer from "../../components/itemcontainer";
 export default {
   name: "home",
   components: {

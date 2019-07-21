@@ -6,10 +6,10 @@ axios.defaults.timeout = 20000;
 
 // 添加请求拦截器 在发送请求前做的事情
 axios.interceptors.request.use(
-  config => {
+  res => {
     // 在发送请求之前做些什么
     console.log("拦截器触发");
-    return config;
+    return res;
   },
   e => {
     // 对请求错误做些什么
@@ -29,7 +29,7 @@ axios.interceptors.response.use(
   }
 );
 
-function getHttp(method, url, params) {
+function getAxios(method, url, params) {
   let httpDefault = {
     method: method,
     baseUrl: baseUrl,
@@ -40,7 +40,7 @@ function getHttp(method, url, params) {
     data: method === "POST" || method === "PUT" ? qs.stringify(params) : null,
     timout: 1000
   };
-  return Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     axios(httpDefault)
       .then(res => {
         resolve(res);
@@ -55,9 +55,9 @@ function getHttp(method, url, params) {
 // Vue.js的插件应当又一个公开方法install，这个方法的第一个参数是Vue构造器，第二个参数是一个可选的vue对象
 export default {
   install: Vue => {
-    Vue.prototype.getHttp = (url, params) => getHttp("GET", url, params);
-    Vue.prototype.postHttp = (url, params) => getHttp("POST", url, params);
-    Vue.prototype.putHttp = (url, params) => getHttp("PUT", url, params);
-    Vue.prototype.deleteHttp = (url, params) => getHttp("DELETE", url, params);
+    Vue.prototype.getHttp = (url, params) => getAxios("GET", url, params);
+    Vue.prototype.postHttp = (url, params) => getAxios("POST", url, params);
+    Vue.prototype.putHttp = (url, params) => getAxios("PUT", url, params);
+    Vue.prototype.deleteHttp = (url, params) => getAxios("DELETE", url, params);
   }
 };
