@@ -19,7 +19,7 @@
           <ul>
             <li
               v-for="(item, index) in itemDetail[itemNum - 1].topic_answer"
-              @click="choosed(index, item.topic_answer_id)"
+              @click="choosed(index, item.is_standard_answer)"
               class="item_list"
               :key="index"
             >
@@ -109,7 +109,7 @@ export default {
     // 最后一题，交卷，清空定时器，跳转分数页面
     submitAnswer() {
       if (this.choosedNum !== null) {
-        this.addNum(this.choosedId);
+        this.addNum({ id: this.choosedId, len: this.itemLen });
         clearInterval(this.timer);
         this.$router.push("score");
       } else {

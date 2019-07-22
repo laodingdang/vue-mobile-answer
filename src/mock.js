@@ -23,7 +23,7 @@ M.mock("/mock/getTopic", () => {
           topic_answer_id: 2,
           topic_id: i,
           answer_name: `选项2`,
-          is_standard_answer: 0
+          is_standard_answer: 1
         },
         {
           topic_answer_id: 3,
