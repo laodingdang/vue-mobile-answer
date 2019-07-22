@@ -1,10 +1,14 @@
 # 说明
 ```
 一个内容非常简单的vue项目
-项目原地址 <a href="https://github.com/bailicangdu/vue2-happyfri">https://github.com/bailicangdu/vue2-happyfri</a> 使用了vue2.0+vuex
+原项目地址(https://github.com/bailicangdu/vue2-happyfri) 使用了vue2.0+vuex
+
 本项目以原项目为标志
+
 使用vue-cli3.0搭建
+
 使用mockjs在本地生成数据
+
 使用axios进行http请求
 ```
 
