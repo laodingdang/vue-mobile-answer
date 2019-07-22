@@ -1,7 +1,8 @@
 # 说明
 ```
 一个内容非常简单的vue项目
-原项目地址(https://github.com/bailicangdu/vue2-happyfri) 使用了vue2.0+vuex
+
+[原项目地址](https://github.com/bailicangdu/vue2-happyfri) 使用了vue2.0+vuex
 
 本项目以原项目为标志
 
