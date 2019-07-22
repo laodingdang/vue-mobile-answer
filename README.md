@@ -6,7 +6,9 @@
 使用vue-cli3.0搭建
 使用mockjs在本地生成数据
 使用axios进行http请求
-## 项目运行
+```
+
+# 项目运行
 ```
 # 克隆到本地
 git clone git@github.com:laodingdang/vue-mobile-answer.git
@@ -22,9 +24,9 @@ npm run serve
 
 # 打包项目
 npm run build
-
-## 路由配置
-
+```
+# 路由配置
+```
 import Vue from "vue";
 import Router from "vue-router";
 import App from "./App.vue";
@@ -56,9 +58,9 @@ export default new Router({
     }
   ]
 });
-
+```
 ## axiosjs
-
+```
 import axios from "axios";
 import qs from "qs";
 let baseUrl = "";
@@ -120,9 +122,9 @@ export default {
     Vue.prototype.deleteHttp = (url, params) => getAxios("DELETE", url, params);
   }
 };
-
+```
 ## mockjs
-
+```
 import M from "mockjs";
 
 M.mock("/mock/getTopic", () => {
@@ -167,9 +169,9 @@ M.mock("/mock/getTopic", () => {
   }
   return list;
 });
-
+```
 ## vuex 配置
-
+```
 # state页面
 
 import Vue from "vue";
@@ -237,9 +239,9 @@ export default {
     state.answerid = [];
   }
 };
-
+```
 ## main.js
-
+```
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
@@ -257,3 +259,4 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount("#app");
+```
