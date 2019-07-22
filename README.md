@@ -1,17 +1,20 @@
 # 说明
-```
+
 一个内容非常简单的vue项目
 
-[原项目地址](https://github.com/bailicangdu/vue2-happyfri) 使用了vue2.0+vuex
+[原项目地址](https://github.com/bailicangdu/vue2-happyfri)
 
 本项目以原项目为标志
 
-使用vue-cli3.0搭建
+原项目使用vue-cli@2.0
+
+本项目使用vue-cli@3.0
+
+区别在于项目搭建方式和项目结构，代码书写无差异
 
 使用mockjs在本地生成数据
 
 使用axios进行http请求
-```
 
 # 项目运行
 ```
